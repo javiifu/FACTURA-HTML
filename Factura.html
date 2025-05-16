@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factura</title>
+    <link rel="stylesheet" href="factura.css">
+    <script src="factura.js"></script>
+</head>
+<body>
+    
+    <div class="Encabezado">
+        <div>Nombre:  
+            <label for="nombre"></label>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+        </div>
+        <div>Apellidos: 
+            <input type="text" id="nombre" name="Apellido" placeholder="Apellido">
+        </div>
+        <div>CIF: 
+            <input type="text" id="nombre" name="nombre" placeholder="CIF">
+        </div>
+        <div>Fecha:
+            <input type="date" id="Fecha" name="nombre" placeholder="Nombre">
+        </div>
+        <div>
+            <input type="button" id="Crear" name="Crear" value="Crear Pedido">
+        </div>
+    </div>
+    <div class = "Pedido">
+        <div>
+            Añadir
+        </div>
+        <div>
+            Descripción
+        </div>
+        <div>
+            Unidades
+        </div>
+        <div>
+            Precio Unitario
+        </div>
+        <div>
+            I.V.A.
+        </div>
+        <div>
+            Total
+        </div>
+        <div>
+            -------
+        </div>
+    </div>
+    <div class="Pedido" id="Pedido"> <!--Aquí tiene que repertirse todo el div cada vez que le demos al boton +-->
+        <div>
+            <input type="button" id="+" value="+"> 
+        </div>
+        <div>
+            <input type="text" placeholder="Descripción artículo">
+        </div>
+        <div>
+            <input type="Text" placeholder="Número Unidades">
+        </div>
+        <div>
+            <input type="Text" placeholder="Precio Unitario">
+        </div>
+        <div>
+            <select id="IVA">
+                <option value="21%">21%</option>
+                <option value="10%">10%</option>  
+                <option value="4%">4%</option>
+            </select>
+        </div>
+        <div>
+            <input type= "text"> <!-- Tiene que calcularse automáticamente y nadie puede escribir en el-->
+        </div>
+        <div>
+            <input type="button" id="Eliminar" name="Eliminar" value="Eliminar Pedido">
+        </div>
+    </div>
+    <div> 
+        <input type="button" id="Factura" value="Factura">
+    </div>
+
+    
+    
+</body>
+</html>
