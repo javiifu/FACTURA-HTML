@@ -13,10 +13,10 @@
     <div class="Encabezado">
         <div>Nombre:  
             <label for="nombre"></label>
-            <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+            <input type="text" class= "solo-letras" id="nombre" name="nombre" placeholder="Nombre">
         </div>
         <div>Apellidos: 
-            <input type="text" id="nombre" name="Apellido" placeholder="Apellido">
+            <input type="text" id="nombre" class= "solo-letras" name="Apellido" placeholder="Apellido">
         </div>
         <div>CIF: 
             <input type="text" id="nombre" name="nombre" placeholder="CIF">
@@ -28,7 +28,7 @@
             <input type="button" id="Crear" name="Crear" value="Crear Pedido">
         </div>
     </div>
-    <div class = "Pedido">
+    <div class = "encabezadoPedido">
         <div>
             Añadir
         </div>
@@ -48,40 +48,44 @@
             Total
         </div>
         <div>
-            -------
+            ------------
         </div>
     </div>
     <div id="contendorclonar">
-        <div class="Pedido"> <!--Aquí tiene que repertirse todo el div cada vez que le demos al boton +-->
+        <div class="Pedido">
             <div>
                 <button onclick="clonarDiv(this)">+</button> 
             </div>
             <div>
-                <input type="text" placeholder="Descripción artículo">
+                <input type="text" class="descripcion" placeholder="Descripción artículo">
             </div>
             <div>
-                <input type="text" placeholder="Número Unidades">
+                <input type="text" class="unidades" placeholder="Número Unidades">
             </div>
             <div>
-                <input type="text" placeholder="Precio Unitario">
+                <input type="text" class="precio-unitario" placeholder="Precio Unitario">
             </div>
             <div>
-                <select id="IVA">
-                    <option value="21%">21%</option>
-                    <option value="10%">10%</option>  
-                    <option value="4%">4%</option>
+                <select class="iva">
+                    <option value="21">21%</option>
+                    <option value="10">10%</option>  
+                    <option value="4">4%</option>
                 </select>
             </div>
             <div>
-                <input type= "text" disabled placeholder="Total"> <!-- Tiene que calcularse automáticamente y nadie puede escribir en el-->
+                <input type="text" class="total" disabled placeholder="Total">
             </div>
             <div>
-                <input type="button" onclick="eliminarDiv(this)" name="Eliminar" value="Eliminar Pedido">
+                <input type="button" value="Eliminar Línea" onclick="eliminarDiv(this)">
             </div>
         </div>
     </div>
+
     <div> 
         <input type="button" id="Factura" value="Factura">
+    </div>
+    <div id="resumenFactura">
+
     </div>
 
     

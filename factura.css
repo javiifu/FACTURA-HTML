@@ -8,9 +8,20 @@ body{
     align-items: center;
     padding: 20px;
 }
-.Pedido{
+.encabezadoPedido{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+}
+.Pedido{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.encabezadoPedido,
+#contendorclonar,
+#Factura,
+#resumenFactura {
+    display: none;
 }
