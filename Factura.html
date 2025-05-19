@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Factura</title>
     <link rel="stylesheet" href="factura.css">
-    <script src="factura.js"></script>
+    <script src="factura.js" defer></script>
+
 </head>
 <body>
     
@@ -50,31 +51,33 @@
             -------
         </div>
     </div>
-    <div class="Pedido" id="Pedido"> <!--Aquí tiene que repertirse todo el div cada vez que le demos al boton +-->
-        <div>
-            <input type="button" id="+" value="+"> 
-        </div>
-        <div>
-            <input type="text" placeholder="Descripción artículo">
-        </div>
-        <div>
-            <input type="Text" placeholder="Número Unidades">
-        </div>
-        <div>
-            <input type="Text" placeholder="Precio Unitario">
-        </div>
-        <div>
-            <select id="IVA">
-                <option value="21%">21%</option>
-                <option value="10%">10%</option>  
-                <option value="4%">4%</option>
-            </select>
-        </div>
-        <div>
-            <input type= "text"> <!-- Tiene que calcularse automáticamente y nadie puede escribir en el-->
-        </div>
-        <div>
-            <input type="button" id="Eliminar" name="Eliminar" value="Eliminar Pedido">
+    <div id="contendorclonar">
+        <div class="Pedido"> <!--Aquí tiene que repertirse todo el div cada vez que le demos al boton +-->
+            <div>
+                <button onclick="clonarDiv(this)">+</button> 
+            </div>
+            <div>
+                <input type="text" placeholder="Descripción artículo">
+            </div>
+            <div>
+                <input type="text" placeholder="Número Unidades">
+            </div>
+            <div>
+                <input type="text" placeholder="Precio Unitario">
+            </div>
+            <div>
+                <select id="IVA">
+                    <option value="21%">21%</option>
+                    <option value="10%">10%</option>  
+                    <option value="4%">4%</option>
+                </select>
+            </div>
+            <div>
+                <input type= "text" disabled placeholder="Total"> <!-- Tiene que calcularse automáticamente y nadie puede escribir en el-->
+            </div>
+            <div>
+                <input type="button" onclick="eliminarDiv(this)" name="Eliminar" value="Eliminar Pedido">
+            </div>
         </div>
     </div>
     <div> 
