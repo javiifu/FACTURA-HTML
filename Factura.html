@@ -16,18 +16,19 @@
             <input type="text" class= "solo-letras" id="nombre" name="nombre" placeholder="Nombre">
         </div>
         <div>Apellidos: 
-            <input type="text" id="nombre" class= "solo-letras" name="Apellido" placeholder="Apellido">
+            <input type="text" id="Apellidos" class= "solo-letras" name="Apellido" placeholder="Apellido">
         </div>
         <div>CIF: 
-            <input type="text" id="nombre" name="nombre" placeholder="CIF">
+            <input type="text" id="CIF" name="nombre" class="CIF" placeholder="CIF">
         </div>
         <div>Fecha:
-            <input type="date" id="Fecha" name="nombre" placeholder="Nombre">
+            <input type="date" id="Fecha" name="nombre" class="Fecha">
         </div>
         <div>
-            <input type="button" id="Crear" name="Crear" value="Crear Pedido">
+            <input type="button" id="Crear" name="Crear" class="crearpedido" value="Crear Pedido">
         </div>
     </div>
+    <hr>
     <div class = "encabezadoPedido">
         <div>
             Añadir
@@ -48,13 +49,16 @@
             Total
         </div>
         <div>
-            ------------
+            ------------------
         </div>
     </div>
+    
     <div id="contendorclonar">
+        <hr>
         <div class="Pedido">
+            
             <div>
-                <button onclick="clonarDiv(this)">+</button> 
+                <button onclick="clonarDiv(this)" class="inputsPedido">+</button> 
             </div>
             <div>
                 <input type="text" class="descripcion" placeholder="Descripción artículo">
@@ -76,13 +80,13 @@
                 <input type="text" class="total" disabled placeholder="Total">
             </div>
             <div>
-                <input type="button" value="Eliminar Línea" onclick="eliminarDiv(this)">
+                <input type="button" class="inputsPedido" value="Eliminar Línea" onclick="eliminarDiv(this)">
             </div>
         </div>
     </div>
 
     <div> 
-        <input type="button" id="Factura" value="Factura">
+        <input type="button" id="Factura" class="inputsPedido" value="Factura">
     </div>
     <div id="resumenFactura">
 

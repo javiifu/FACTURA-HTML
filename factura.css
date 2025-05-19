@@ -25,3 +25,44 @@ body{
 #resumenFactura {
     display: none;
 }
+.solo-letras{
+    background-color: #e7cca9;
+    border-color: black;
+    
+}
+.CIF{
+    background-color: #e7cca9;
+    border-color: black;
+}
+.Fecha{
+    background-color: #e7cca9;
+    border-color: black;
+}
+.crearpedido{
+    background-color: #e7cca9;
+    border-color: black;
+}
+.inputsPedido{
+    background-color: #e7cca9;
+    border-color: black;
+}
+.descripcion{
+    background-color: #e7cca9;
+    border-color: black;
+}
+.unidades{
+    background-color: #e7cca9;
+    border-color: black;
+}
+.precio-unitario{
+    background-color: #e7cca9;
+    border-color: black;
+}
+.iva{
+    background-color: #e7cca9;
+    border-color: black;
+}
+.total{
+    border-color: black;
+    background-color: bisque;
+}
