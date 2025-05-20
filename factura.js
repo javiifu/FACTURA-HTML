@@ -124,7 +124,7 @@ function togglePedido() {
     const resumen = document.getElementById("resumenFactura");
 
     if (crearBtn.value === "Crear Pedido") {
-        // Mostrar contenido del pedido
+        // Mostrar todos los elementos del pedido
         encabezadoPedido.style.display = "flex";
         contenedor.style.display = "block";
         btnFactura.style.display = "inline-block";
@@ -133,16 +133,18 @@ function togglePedido() {
         // Cambiar botón
         crearBtn.value = "Eliminar Pedido";
     } else {
-        // Ocultar todo y resetear
+        // Ocultar y vaciar todos los elementos del pedido
         encabezadoPedido.style.display = "none";
+        contenedor.style.display = "none";
         contenedor.innerHTML = ""; // Eliminar líneas
-        resumen.innerHTML = ""; // Limpiar resumen
         btnFactura.style.display = "none";
+        resumen.style.display = "none";
+        resumen.innerHTML = "";
 
-        // Restaurar una línea de pedido vacía
+        // Restaurar una línea vacía invisible (por si se vuelve a activar)
         contenedor.innerHTML = `
             <div class="Pedido">
-                <div><button onclick="clonarDiv(this)">+</button></div>
+                <div><button onclick="clonarDiv(this)" class="inputsPedido">+</button></div>
                 <div><input type="text" class="descripcion" placeholder="Descripción artículo"></div>
                 <div><input type="text" class="unidades" placeholder="Número Unidades"></div>
                 <div><input type="text" class="precio-unitario" placeholder="Precio Unitario"></div>
@@ -154,17 +156,17 @@ function togglePedido() {
                     </select>
                 </div>
                 <div><input type="text" class="total" disabled placeholder="Total"></div>
-                <div><input type="button" value="Eliminar Línea" onclick="eliminarDiv(this)"></div>
+                <div><input type="button" value="Eliminar Línea" onclick="eliminarDiv(this)" class="inputsPedido"></div>
             </div>
         `;
 
-        // Volver a asignar cálculo y eventos
-        asignarEventosCalculo(document.querySelector(".Pedido"));
+        asignarEventosCalculo(contenedor.querySelector(".Pedido"));
 
-        // Cambiar botón de nuevo
+        // Cambiar el botón a su estado inicial
         crearBtn.value = "Crear Pedido";
     }
 }
+
 //Función que asigna las validaciones de letras y números en la línea de pedido.
 function asignarValidacionesPedido(pedidoDiv) {
     const descripcion = pedidoDiv.querySelector(".descripcion");
